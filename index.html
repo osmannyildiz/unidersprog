@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>unidersprog-d6</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<main id="app">
+		<div class="content">
+
+			<section v-for="weekday in weekdays" class="weekday" :id="weekday.id">
+				<div class="weekday-name">{{ weekday.name }}</div>
+				<div v-if="weekday.sessions.length === 0" class="free-day">Tatil&nbsp;&nbsp;<i class="fa fa-smile-o"></i></div>
+				<div class="table-wrapper">
+					<table>
+						<tbody>
+							<tr v-for="session in weekday.sessions">
+								<td class="time">{{ session.startTime }} - {{ session.endTime }}</td>
+								<td class="course-name">[{{ session.courseCode }}] {{ session.courseName }}</td>
+								<td v-if="session.place === 'UZEM'" class="place"><i class="fa fa-laptop"></i></td>
+								<td v-else class="place">{{ session.place }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+		</div>
+		<span id="last-updated">Son güncelleme: 2022-03-12</span>
+	</main>
+
+	<script src="https://unpkg.com/vue@3"></script>
+	<script src="index.js"></script>
+</body>
+</html>

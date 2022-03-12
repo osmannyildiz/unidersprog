@@ -1,0 +1,152 @@
+:root {
+	--color-text: white;
+	--color-bg: #1b1f23;
+	--color-red: #d73a49;
+	--color-orange: #c24e00;
+	--color-yellow: #a89200;
+	--color-green: #22863a;
+	--color-blue: #0a67d1;
+	--color-purple: #6f42c1;
+	--color-pink: #d03592;
+	--border-radius: 0.75rem;
+	--border-width: 3px;
+	--weekday-name-padding: 0.1rem 1.25rem 0.4rem 1.25rem;
+	--table-row-padding-y: 1rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	margin-top: 20px;
+	background-color: lightslategray;
+}
+
+main {
+	margin: 0 auto;
+	padding: 3rem;
+	width: 1080px;
+	height: 2340px;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 2.5rem;
+	position: relative;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.weekday {
+	position: relative;
+	margin-bottom: 7rem;
+}
+.weekday:last-of-type {
+	margin-bottom: 0;
+}
+
+.weekday .weekday-name {
+	background-color: white;
+	font-family: "Caveat Brush", cursive;
+	font-size: 4rem;
+	width: 18rem;
+	padding: var(--weekday-name-padding);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	line-height: 1;
+}
+
+.weekday .free-day {
+	position: absolute;
+	top: 0.4rem;
+	left: 20rem;
+	font-family: "Caveat Brush", cursive;
+	font-size: 3rem;
+}
+
+.weekday .table-wrapper {
+	border-top: var(--border-width) solid white;
+}
+
+.weekday table {
+	width: 100%;
+	border-collapse: collapse;
+	/* https://stackoverflow.com/a/5814931 */
+	table-layout: fixed;
+}
+
+.weekday table tr {
+	border-bottom: var(--border-width) solid white;
+	/* padding: 0 1.25rem; */  /* Doesn't work */
+}
+
+.weekday table td {
+	padding: 0.2rem 0;
+}
+
+.weekday table .time {
+	padding-left: var(--table-row-padding-y);
+	width: 16.5rem;
+}
+
+.weekday table .course-name {
+	/* https://stackoverflow.com/a/34294113 */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.weekday table .place {
+	padding-right: var(--table-row-padding-y);
+	text-align: right;
+	width: 9rem;
+}
+
+.weekday table .place .fa-laptop {
+	font-size: 3rem;
+	position: relative;
+	top: 0.4rem;
+}
+
+#monday .weekday-name { background-color: var(--color-red); }
+#monday .table-wrapper { border-top-color: var(--color-red); }
+#monday table tr { border-bottom-color: var(--color-red); }
+
+#tuesday .weekday-name { background-color: var(--color-orange); }
+#tuesday .table-wrapper { border-top-color: var(--color-orange); }
+#tuesday table tr { border-bottom-color: var(--color-orange); }
+
+#wednesday .weekday-name { background-color: var(--color-yellow); }
+#wednesday .table-wrapper { border-top-color: var(--color-yellow); }
+#wednesday table tr { border-bottom-color: var(--color-yellow); }
+
+#thursday .weekday-name { background-color: var(--color-green); }
+#thursday .table-wrapper { border-top-color: var(--color-green); }
+#thursday table tr { border-bottom-color: var(--color-green); }
+
+#friday .weekday-name { background-color: var(--color-blue); }
+#friday .table-wrapper { border-top-color: var(--color-blue); }
+#friday table tr { border-bottom-color: var(--color-blue); }
+
+#saturday .weekday-name { background-color: var(--color-purple); }
+#saturday .table-wrapper { border-top-color: var(--color-purple); }
+#saturday table tr { border-bottom-color: var(--color-purple); }
+
+#sunday .weekday-name { background-color: var(--color-pink); }
+#sunday .table-wrapper { border-top-color: var(--color-pink); }
+#sunday table tr { border-bottom-color: var(--color-pink); }
+
+#last-updated {
+	font-size: 1.25rem;
+	position: absolute;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
