@@ -1,7 +1,7 @@
 Vue.createApp({
 	data() {
 		return {
-			lastUpdated: "2022-03-12",
+			lastUpdated: "2022-03-17",
 			weekdays: [
 				{
 					id: "monday",
@@ -54,7 +54,7 @@ Vue.createApp({
 					name: "Perşembe",
 					sessions: [
 						{
-							startTime: "09:20",
+							startTime: "11:00",
 							endTime: "13:15",
 							courseCode: "CE332",
 							courseName: "Computer Networks",
