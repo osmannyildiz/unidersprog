@@ -1,6 +1,7 @@
 Vue.createApp({
 	data() {
 		return {
+			lastUpdated: "2022-03-12",
 			weekdays: [
 				{
 					id: "monday",
