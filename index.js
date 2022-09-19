@@ -1,7 +1,7 @@
 Vue.createApp({
 	data() {
 		return {
-			lastUpdated: "2022-03-17",
+			lastUpdated: "2022-09-19",
 			weekdays: [
 				{
 					id: "monday",
@@ -9,84 +9,52 @@ Vue.createApp({
 					sessions: [
 						{
 							startTime: "14:00",
-							endTime: "16:15",
-							courseCode: "CE322",
-							courseName: "Distributed Systems",
-							place: "A-119",
+							endTime: "16:35",
+							courseCode: "CE457",
+							courseName: "Data Mining",
+							place: "A-118",
+						},
+						{
+							startTime: "16:45",
+							endTime: "19:20",
+							courseCode: "CE434",
+							courseName: "Computer & Network Security",
+							place: "A-118",
 						},
 					],
 				},
 				{
 					id: "tuesday",
 					name: "Salı",
-					sessions: [
-						{
-							startTime: "09:20",
-							endTime: "13:15",
-							courseCode: "EEE621",
-							courseName: "Haberleşme Mühendisliği",
-							place: "M-Z02",
-						},
-						{
-							startTime: "14:00",
-							endTime: "16:15",
-							courseCode: "CE435",
-							courseName: "Internet Programming",
-							place: "A-118",
-						},
-					],
+					sessions: [],
 				},
 				{
 					id: "wednesday",
 					name: "Çarşamba",
 					sessions: [
 						{
-							startTime: "14:50",
-							endTime: "17:05",
-							courseCode: "CE426",
-							courseName: "Formal Languages and Automata Theory",
-							place: "M-201",
+							startTime: "14:55",
+							endTime: "17:30",
+							courseCode: "CE420",
+							courseName: "Java'da Uygulama Geliştirme",
+							place: "M-301",
 						},
 					],
 				},
 				{
 					id: "thursday",
 					name: "Perşembe",
-					sessions: [
-						{
-							startTime: "11:00",
-							endTime: "13:15",
-							courseCode: "CE332",
-							courseName: "Computer Networks",
-							place: "M-101",
-						},
-					],
+					sessions: [],
 				},
 				{
 					id: "friday",
 					name: "Cuma",
-					sessions: [
-						{
-							startTime: "08:30",
-							endTime: "12:25",
-							courseCode: "CE334",
-							courseName: "Operating Systems",
-							place: "M-202",
-						},
-					],
+					sessions: [],
 				},
 				{
 					id: "saturday",
 					name: "Cumartesi",
-					sessions: [
-						{
-							startTime: "13:10",
-							endTime: "14:20",
-							courseCode: "US183",
-							courseName: "Basit Şifreleme Teknikleri",
-							place: "UZEM",
-						},
-					],
+					sessions: [],
 				},
 				{
 					id: "sunday",
