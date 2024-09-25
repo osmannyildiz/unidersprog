@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>unidersprog-d6</title>
+  <title>unidersprog-d11</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 
       <section v-for="weekday in weekdays" class="weekday" :id="weekday.id">
         <div class="weekday-name">{{ weekday.name }}</div>
-        <div v-if="weekday.sessions.length === 0" class="free-day">Tatil&nbsp;&nbsp;<i class="fa fa-smile-o"></i></div>
+        <div v-if="weekday.sessions.length === 0" class="free-day">No school&nbsp;&nbsp;<i class="fa fa-frown-o"></i></div>
         <div class="table-wrapper">
           <table>
             <tbody>
@@ -33,7 +33,7 @@
       </section>
 
     </div>
-    <span id="last-updated">Son güncelleme: {{ lastUpdated }}</span>
+    <span id="last-updated">Last updated: {{ lastUpdated }}</span>
   </main>
 
   <script src="https://unpkg.com/vue@3"></script>
