@@ -1,7 +1,7 @@
 Vue.createApp({
   data() {
     return {
-      lastUpdated: "2024-09-25",
+      lastUpdated: "2024-09-27",
       weekdays: [
         {
           id: "monday",
@@ -11,7 +11,7 @@ Vue.createApp({
               startTime: "13:00",
               endTime: "15:50",
               courseCode: "BUS515",
-              courseName: "Inno And Tech Mgmt",
+              courseName: "Inno and Tech Mgmt",
               place: "805",
             },
             {
@@ -75,14 +75,14 @@ Vue.createApp({
               place: "805",
             },
             {
-              startTime: "14:00",
+              startTime: "15:00",
               endTime: "16:50",
               courseCode: "BUS503",
               courseName: "Fin Acc",
               place: "208",
             },
             {
-              startTime: "17:00",
+              startTime: "18:00",
               endTime: "19:50",
               courseCode: "ISL703",
               courseName: "Fin Muh ve Rap",
@@ -93,7 +93,15 @@ Vue.createApp({
         {
           id: "friday",
           name: "Friday",
-          sessions: [],
+          sessions: [
+            {
+              startTime: "15:00",
+              endTime: "17:50",
+              courseCode: "CENG583",
+              courseName: "Deep Learning",
+              place: "C401",
+            },
+          ],
         },
         {
           id: "saturday",
